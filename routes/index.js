@@ -13,7 +13,7 @@ const Whatsapp = new WhatsappCloudAPI({
     graphAPIVersion: 'v15.0'
 });
 
-router.get('/meta_wa_callbackurl1', (req, res) => {
+router.get('/meta_wa_callbackurl1', async (req, res) => {
     try {
         console.log('GET: Someone is pinging me!');
         let data = Whatsapp.parseMessage(req.body);
